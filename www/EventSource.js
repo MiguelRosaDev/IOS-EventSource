@@ -1,11 +1,11 @@
 var exec = require('cordova/exec');
 
-var PLUGIN_NAME = 'HabitPlugin';
+var PLUGIN_NAME = 'EventSource';
 
-exports.getDeviceInfo = function (serialnumber, imei, success, error) {
-  exec(success, error, PLUGIN_NAME, "getDeviceInfo", [(serialnumber==''?null:serialnumber), (imei==''?null:imei)]);
+exports.onOpen = function (url, success, error) {
+  exec(success, error, PLUGIN_NAME, "onOpen", [(serialnumber==''?null:url)]);
 };
 
-exports.performTests = function (appid, apikey, serialnumber, imei, tests, language, themecolor, hidestartscreen, customization, success, error) {
-  exec(success, error, PLUGIN_NAME, "performTests", [appid, apikey, (serialnumber==''?null:serialnumber), (imei==''?null:imei), tests, language, themecolor, hidestartscreen, customization]);
+exports.onMessage = function (success, error) {
+  exec(success, error, PLUGIN_NAME, "onMessage", []);
 };
