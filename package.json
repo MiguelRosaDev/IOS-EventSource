@@ -1,0 +1,28 @@
+{
+  "name": "com.cordova.plugin.EventSource",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "com.cordova.plugin.EventSource",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelrosanos/IOS-EventSource.git"
+  },
+  "keywords": [
+    "Toast",
+    "Notification",
+    "Message",
+    "Alert",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "NOS",
+  "bugs": {
+    "url": "https://github.com/MiguelRosaDev/IOS-EventSource"
+  },
+  "homepage": "https://github.com/MiguelRosaDev/IOS-EventSource"
+}
