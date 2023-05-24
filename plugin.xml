@@ -13,20 +13,20 @@
         <engine name="cordova-ios" version=">=5.1.1" />
     </engines>
 	
-    <js-module name="EventSource" src="www/EventSource.js">
-    	<clobbers target="EventSource" />
+    <js-module name="MyEventSource" src="www/MyEventSource.js">
+    	<clobbers target="MyEventSource" />
     </js-module>
 	
     <platform name="ios">
 	    
         <config-file target="config.xml" parent="/*">
             <feature name="EventSource">
-                <param name="ios-package" value="EventSource"/>
+                <param name="ios-package" value="MyEventSource"/>
 		<param name="onload" value="true" />
             </feature>
         </config-file>
-	<header-file src="src/ios/EventSource.h"/>
-        <source-file src="src/ios/EventSource.m"/>
+	<header-file src="src/ios/MyEventSource.h"/>
+        <source-file src="src/ios/MyEventSource.m"/>
 	    
         <podspec>
             <config>
