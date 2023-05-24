@@ -1,12 +1,11 @@
 #import <Cordova/CDV.h>
 
 
-@interface HabitPlugin : CDVPlugin {
+@interface EventSource : CDVPlugin {
 }
 
 // The hooks for our plugin commands
-- (void)getDeviceInfo:(CDVInvokedUrlCommand *)command;
-- (void)performTests:(CDVInvokedUrlCommand *)command;
-- (UIColor *)colorFromHexString:(NSString *)hexString;
+- (void)onOpen:(CDVInvokedUrlCommand *)command;
+- (void)onMessage:(CDVInvokedUrlCommand *)command;
 
 @end
