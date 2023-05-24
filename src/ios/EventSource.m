@@ -21,7 +21,7 @@
 }
 
 - (void)open:(CDVInvokedUrlCommand *)command {
-    [self.eventSource onOpen:^{
+    [self.eventSource onOpen:^(Event *__strong event) {
         NSLog(@"Connection opened");
         CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
