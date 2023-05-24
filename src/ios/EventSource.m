@@ -1,7 +1,7 @@
 #import <EventSource/EventSource.h>
 #import <Cordova/CDVPlugin.h>
 
-@interface MyEventSource : CDVPlugin
+@interface MyEventSource : CDVPlugin 
 
 @property (nonatomic, strong) EventSource *eventSource;
 
