@@ -1,50 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="com.cordova.plugin.HabitPlugin" version="0.0.1">
+        id="com.cordova.plugin.EventSource" version="0.0.1">
     <name>Habit</name>
 
-    <description>An Android Cordova plugin</description>
+    <description>An IOS Cordova plugin</description>
     <license>NOS</license>
 
-    <keywords>cordova,android,toast,message,alert</keywords>
+    <keywords>cordova,IOS,message,alert</keywords>
 	
     <engines>
-        <engine name="cordova-android" version=">=8.1.0" />
         <engine name="cordova-ios" version=">=5.1.1" />
     </engines>
 	
-    <js-module name="HabitPlugin" src="www/habit.js">
-    	<clobbers target="Habit" />
+    <js-module name="EventSource" src="www/EventSource.js">
+    	<clobbers target="EventSource" />
     </js-module>
-  
-    <platform name="android">	 	    
-    	<source-file src="src/android/HabitPlugin.java" target-dir="src/com/cordova/plugin/HabitPlugin" />
-	<source-file src="src/android/MyCustomization.java" target-dir="src/com/cordova/plugin/HabitPlugin" />
-
-	<config-file target="res/xml/config.xml" parent="/*">
-		<feature name="HabitPlugin">
-		    <param name="android-package" value="com.cordova.plugin.HabitPlugin"/>	
-		</feature>
-	</config-file>	
-	    
-	<framework src="src/android/build.gradle" custom="true" type="gradleReference" />
-	<framework src="build-extras.gradle" custom="true" type="gradleReference" />
-	<lib-file src="library/DeviceHealth.aar" target="libs/DeviceHealth.aar" />	
-	   
-    </platform>
 	
     <platform name="ios">
 	    
         <config-file target="config.xml" parent="/*">
-            <feature name="HabitPlugin">
-                <param name="ios-package" value="HabitPlugin"/>
+            <feature name="EventSource">
+                <param name="ios-package" value="EventSource"/>
 		<param name="onload" value="true" />
             </feature>
         </config-file>
-	<header-file src="src/ios/HabitPlugin.h"/>
-        <source-file src="src/ios/HabitPlugin.m"/>
-    	<framework src="src/ios/Frameworks/DeviceHealth.xcframework" custom="true" embed="true"/>
+	<header-file src="src/ios/EventSource.h"/>
+        <source-file src="src/ios/EventSource.m"/>
+	    
+        <podspec>
+            <config>
+                <source url="https://github.com/inaka/EventSource.git"/>
+            </config>
+            <pods use-frameworks="true">
+                <pod name="EventSource"/>
+            </pods>
+        </podspec>
 	    
     </platform>
 </plugin>
